@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<h1>Welcom to Relative_url_templates!</h1>
+<!--<a href="basic_app/other.html">The other page</a> -->
+<a href="{% url 'basic_app:other' %}">The other page</a>
+<!-- :왼쪽 basic_app은 basic_app\urls.py에서 정의한 app 이름이고, 오른쪽은 볼 urlpatterns 대상
+ 이''안에는 불필요한 스페이스등을 넣으면 안된다. [모두 이름으로 인식]
+-->
+<a href="{% url 'admin:index' %}">LINK TO ADMIN</a>
+<!-- admin page로 이동, 우선 migration이 필요할 듯
+-->
+<a href="{% url 'index' %}">GOTO INDEX!</a>
+  </body>
+</html>
